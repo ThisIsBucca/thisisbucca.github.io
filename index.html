@@ -16,14 +16,21 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="spinner"></div>
+        </div>
+    </div>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-inner">
                 <a href="#" class="logo">Bucca<span>.</span></a>
                 
-                <button class="nav-toggle">
-                    <i class='bx bx-menu'></i>
+                <!-- Mobile theme toggle visible on small screens -->
+                <button id="theme-toggle-mobile" class="theme-toggle mobile-header-theme-toggle" aria-label="Toggle theme">
+                    <i class='bx bx-moon theme-icon'></i>
                 </button>
                 
                 <nav class="navbar">
@@ -36,10 +43,9 @@
                         <li><a href="#contact" class="nav-link">Contact</a></li>
                     </ul>
                     
-                    <div class="theme-toggle">
-                        <i class='bx bx-moon'></i>
-                        <i class='bx bx-sun'></i>
-                    </div>
+                    <button id="theme-toggle" class="theme-toggle desktop-theme-toggle">
+                        <i class='bx bx-moon theme-icon'></i>
+                    </button>
                 </nav>
             </div>
         </div>
@@ -57,10 +63,32 @@
                     <a href="#contact" class="btn btn-primary">Hire Me <i class='bx bx-right-arrow-alt'></i></a>
                     <a href="#projects" class="btn btn-secondary">View My Work</a>
                 </div>
+                
+
             </div>
             
             <div class="hero-image">
                 <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/kushi-IvMcPWXQmT3Ur633OVILAf2NnYpoXD.png" alt="Bucca - Frontend Developer">
+                <!-- Music Player in Hero Image -->
+                <div class="hero-music-player">
+                    <button id="music-toggle" class="music-toggle" aria-label="Play background music">
+                        <div class="music-icon-container">
+                            <div class="music-icon">
+                                <i class='bx bx-play'></i>
+                                <i class='bx bx-pause' style="display: none;"></i>
+                            </div>
+                            <div class="music-waves">
+                                <span class="wave"></span>
+                                <span class="wave"></span>
+                                <span class="wave"></span>
+                            </div>
+                        </div>
+                    </button>
+                    <audio id="background-music" loop>
+                        <source src="media/background-music.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
             </div>
             
             <div class="hero-scroll">
@@ -69,6 +97,22 @@
             </div>
         </div>
     </section>
+
+    <!-- Mobile Music Player (Hidden on desktop) -->
+    <div class="mobile-music-player">
+        <button id="mobile-music-toggle" class="music-toggle" aria-label="Play background music">
+            <div class="music-icon-container">
+                <div class="music-icon">
+                    <i class='bx bx-play'></i>
+                    <i class='bx bx-pause' style="display: none;"></i>
+                </div>
+            </div>
+        </button>
+        <audio id="mobile-background-music" loop>
+            <source src="media/background-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
 
     <!-- About Section -->
     <section id="about" class="about">
@@ -183,88 +227,46 @@
             <h2 class="section-title">My <span class="text-gradient">Projects</span></h2>
             
             <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web Design</button>
-                <button class="filter-btn" data-filter="app">App Development</button>
-                <button class="filter-btn" data-filter="ui">UI/UX Design</button>
+                <button class="filter-btn active" data-filter="web">Web Design</button>
             </div>
             
             <div class="projects-grid">
+                <!-- Project 1 -->
                 <div class="project-card animate-on-scroll" data-category="web">
-                    <img src="/placeholder.svg?height=400&width=600" alt="E-commerce Website" class="project-image">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80" alt="E-commerce Website" class="project-image">
                     <div class="project-overlay">
                         <span class="project-category">Web Design</span>
                         <h3 class="project-title">E-commerce Platform</h3>
-                        <p class="project-description">A fully responsive e-commerce website with product filtering, cart functionality, and secure checkout.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class='bx bx-link-external'></i></a>
-                            <a href="#" class="project-link"><i class='bx bxl-github'></i></a>
-                        </div>
+                        <p class="project-description">A fully responsive e-commerce website with product catalog, cart, and secure checkout functionality.</p>
+                        <a href="https://github.com/ThisIsBucca" class="project-link" target="_blank">
+                            <i class='bx bxl-github'></i> View on GitHub
+                        </a>
                     </div>
                 </div>
                 
-                <div class="project-card animate-on-scroll" data-category="app">
-                    <img src="/placeholder.svg?height=400&width=600" alt="Mobile App" class="project-image">
-                    <div class="project-overlay">
-                        <span class="project-category">App Development</span>
-                        <h3 class="project-title">Fitness Tracker App</h3>
-                        <p class="project-description">A cross-platform mobile application for tracking workouts, nutrition, and health metrics.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class='bx bx-link-external'></i></a>
-                            <a href="#" class="project-link"><i class='bx bxl-github'></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card animate-on-scroll" data-category="ui">
-                    <img src="/placeholder.svg?height=400&width=600" alt="UI/UX Design" class="project-image">
-                    <div class="project-overlay">
-                        <span class="project-category">UI/UX Design</span>
-                        <h3 class="project-title">Banking Dashboard</h3>
-                        <p class="project-description">A modern banking dashboard with intuitive user interface and comprehensive financial analytics.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class='bx bx-link-external'></i></a>
-                            <a href="#" class="project-link"><i class='bx bxl-github'></i></a>
-                        </div>
-                    </div>
-                </div>
-                
+                <!-- Project 2 -->
                 <div class="project-card animate-on-scroll" data-category="web">
-                    <img src="/placeholder.svg?height=400&width=600" alt="Portfolio Website" class="project-image">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1069&q=80" alt="Portfolio Website" class="project-image">
                     <div class="project-overlay">
                         <span class="project-category">Web Design</span>
-                        <h3 class="project-title">Creative Agency Website</h3>
-                        <p class="project-description">A dynamic website for a creative agency featuring animated sections and interactive elements.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class='bx bx-link-external'></i></a>
-                            <a href="#" class="project-link"><i class='bx bxl-github'></i></a>
-                        </div>
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <p class="project-description">A modern and responsive portfolio website with smooth animations and interactive elements.</p>
+                        <a href="https://github.com/ThisIsBucca" class="project-link" target="_blank">
+                            <i class='bx bxl-github'></i> View on GitHub
+                        </a>
                     </div>
                 </div>
-                
-                <div class="project-card animate-on-scroll" data-category="app">
-                    <img src="/placeholder.svg?height=400&width=600" alt="Web Application" class="project-image">
+
+                <!-- Project 3 -->
+                <div class="project-card animate-on-scroll" data-category="web">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Task Management App" class="project-image">
                     <div class="project-overlay">
-                        <span class="project-category">App Development</span>
-                        <h3 class="project-title">Task Management System</h3>
-                        <p class="project-description">A comprehensive task management application with team collaboration features and analytics.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class='bx bx-link-external'></i></a>
-                            <a href="#" class="project-link"><i class='bx bxl-github'></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card animate-on-scroll" data-category="ui">
-                    <img src="/placeholder.svg?height=400&width=600" alt="UI Design" class="project-image">
-                    <div class="project-overlay">
-                        <span class="project-category">UI/UX Design</span>
-                        <h3 class="project-title">Travel Booking Platform</h3>
-                        <p class="project-description">A user-friendly travel booking interface with intuitive search and booking experience.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class='bx bx-link-external'></i></a>
-                            <a href="#" class="project-link"><i class='bx bxl-github'></i></a>
-                        </div>
+                        <span class="project-category">Web Application</span>
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-description">A full-stack task management application with user authentication, task categorization, and real-time updates.</p>
+                        <a href="https://github.com/ThisIsBucca" class="project-link" target="_blank">
+                            <i class='bx bxl-github'></i> View on GitHub
+                        </a>
                     </div>
                 </div>
             </div>
@@ -276,52 +278,31 @@
         <div class="container">
             <h2 class="section-title">Client <span class="text-gradient">Testimonials</span></h2>
             
-            <div class="testimonials-container">
+            <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"Working with Bucca was an absolute pleasure. Their attention to detail and creative approach to problem-solving resulted in a website that exceeded our expectations. The project was delivered on time and the communication throughout was excellent."</p>
-                    
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <img src="/placeholder.svg?height=100&width=100" alt="Client Avatar">
+                    <div class="testimonial-content">
+                        <div class="testimonial-image">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson">
                         </div>
-                        <div class="testimonial-info">
-                            <h4 class="testimonial-name">Sarah Johnson</h4>
-                            <p class="testimonial-position">CEO, TechStart Inc.</p>
+                        <p class="testimonial-text">"Working with Bucca was an absolute pleasure. Their attention to detail and creative approach to problem-solving resulted in a website that exceeded our expectations. The communication was excellent throughout the project."</p>
+                        <div class="testimonial-author">
+                            <h4>Sarah Johnson</h4>
+                            <span>CEO, TechSolutions Inc.</span>
                         </div>
                     </div>
                 </div>
                 
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"Bucca transformed our outdated website into a modern, responsive platform that has significantly increased our user engagement and conversion rates. Their technical expertise combined with design skills make them a standout developer."</p>
-                    
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <img src="/placeholder.svg?height=100&width=100" alt="Client Avatar">
+                    <div class="testimonial-content">
+                        <div class="testimonial-image">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
                         </div>
-                        <div class="testimonial-info">
-                            <h4 class="testimonial-name">Michael Chen</h4>
-                            <p class="testimonial-position">Marketing Director, GlobalBrand</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"I've worked with many developers over the years, but Bucca stands out for their ability to understand our business needs and translate them into functional, beautiful digital solutions. They're now our go-to developer for all web projects."</p>
-                    
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <img src="/placeholder.svg?height=100&width=100" alt="Client Avatar">
-                        </div>
-                        <div class="testimonial-info">
-                            <h4 class="testimonial-name">Emily Rodriguez</h4>
-                            <p class="testimonial-position">Product Manager, InnovateLabs</p>
+                        <p class="testimonial-text">"Bucca's technical expertise and design sensibility are truly impressive. They delivered our project on time and within budget, and the end result was exactly what we were looking for. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <h4>Michael Chen</h4>
+                            <span>Founder, DesignHub</span>
                         </div>
                     </div>
-                </div>
-                
-                <div class="testimonial-controls">
-                    <button class="testimonial-btn testimonial-prev"><i class='bx bx-chevron-left'></i></button>
-                    <button class="testimonial-btn testimonial-next"><i class='bx bx-chevron-right'></i></button>
                 </div>
             </div>
         </div>
@@ -334,9 +315,6 @@
             
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3 class="contact-title">Let's talk about your project</h3>
-                    <p class="contact-description">Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
-                    
                     <div class="contact-item">
                         <div class="contact-icon">
                             <i class='bx bx-map'></i>
@@ -353,7 +331,7 @@
                         </div>
                         <div class="contact-text">
                             <h4>Email</h4>
-                            <a href="mailto:bucca@codeteam.com">bucca@codeteam.com</a>
+                            <a href="mailto:buccaphilox0104@gmail.com">buccaphilox0104@gmail.com</a>
                         </div>
                     </div>
                     
@@ -363,43 +341,17 @@
                         </div>
                         <div class="contact-text">
                             <h4>Phone</h4>
-                            <a href="tel:+1234567890">+123 456 7890</a>
+                            <a href="tel:+2556986840">+255 6986840</a>
                         </div>
                     </div>
                     
                     <div class="contact-social">
                         <a href="https://twitter.com/buccaprezdz33" class="social-link" target="_blank" rel="noopener"><i class='bx bxl-twitter'></i></a>
-                        <a href="#" class="social-link" target="_blank" rel="noopener"><i class='bx bxl-linkedin'></i></a>
+                        <a href="https://wa.me/2556986840" class="social-link" target="_blank" rel="noopener"><i class='bx bxl-whatsapp'></i></a>
                         <a href="#" class="social-link" target="_blank" rel="noopener"><i class='bx bxl-discord-alt'></i></a>
                         <a href="https://github.com/ThisIsBucca" class="social-link" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
                     </div>
                 </div>
-                
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Your Name</label>
-                        <input type="text" id="name" class="form-input" placeholder="Enter your name">
-                    </div>
-                  class="form-input" placeholder="Enter your name">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email" class="form-label">Your Email</label>
-                        <input type="email" id="email" class="form-input" placeholder="Enter your email">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject" class="form-label">Subject</label>
-                        <input type="text" id="subject" class="form-input" placeholder="Enter subject">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message" class="form-label">Your Message</label>
-                        <textarea id="message" class="form-textarea" placeholder="Enter your message"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="form-button">Send Message</button>
-                </form>
             </div>
         </div>
     </section>
@@ -459,5 +411,54 @@
 
     <!-- JavaScript -->
     <script src="js/script.js"></script>
+
+    <!-- Mobile Music Player (Hidden on desktop) -->
+    <div class="mobile-music-player">
+        <button id="mobile-music-toggle" class="music-toggle" aria-label="Play background music">
+            <div class="music-icon-container">
+                <div class="music-icon">
+                    <i class='bx bx-play'></i>
+                    <i class='bx bx-pause' style="display: none;"></i>
+                </div>
+            </div>
+        </button>
+        <audio id="mobile-background-music" loop>
+            <source src="media/background-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script>
+        // Initialize audio elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set volume for both audio elements
+            const desktopAudio = document.getElementById('background-music');
+            const mobileAudio = document.getElementById('mobile-background-music');
+            
+            if (desktopAudio) desktopAudio.volume = 0.3;
+            if (mobileAudio) mobileAudio.volume = 0.3;
+            
+            // Sync audio between players
+            if (desktopAudio && mobileAudio) {
+                desktopAudio.addEventListener('play', () => {
+                    mobileAudio.currentTime = desktopAudio.currentTime;
+                    mobileAudio.play().catch(e => console.log('Mobile play failed:', e));
+                });
+                
+                desktopAudio.addEventListener('pause', () => {
+                    mobileAudio.pause();
+                });
+                
+                mobileAudio.addEventListener('play', () => {
+                    desktopAudio.currentTime = mobileAudio.currentTime;
+                    desktopAudio.play().catch(e => console.log('Desktop play failed:', e));
+                });
+                
+                mobileAudio.addEventListener('pause', () => {
+                    desktopAudio.pause();
+                });
+            }
+        });
+    </script>
 </body>
 </html>
