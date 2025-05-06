@@ -1,132 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-
+    <title>Bucca | Frontend Developer & UI/UX Designer</title>
+    <meta name="description" content="Portfolio of Bucca, a creative frontend developer and UI/UX designer specializing in modern web experiences.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-
 <body>
+    <!-- Header -->
     <header class="header">
-        <a href="#" class="logo">Bucca.<span class="animate" style="--i:1;"></span></a>
-
-        <div class="bx bx-menu" id="menu-icon">
-            <span class="animate" style="--i:2;"></span>
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">Bucca<span>.</span></a>
+                
+                <button class="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </button>
+                
+                <nav class="navbar">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link active">Home</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#skills" class="nav-link">Skills</a></li>
+                        <li><a href="#projects" class="nav-link">Projects</a></li>
+                        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                    
+                    <div class="theme-toggle">
+                        <i class='bx bx-moon'></i>
+                        <i class='bx bx-sun'></i>
+                    </div>
+                </nav>
+            </div>
         </div>
-
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#skills">Skills</a>
-         
-        <span class="active-nav"></span>
-        <span class="animate" style="--i:2;"></span>
-        </nav>
-
     </header>
 
-    <!--home section design-->
-    <section class="home show-animate" id="home">
-        <div class="home-content">
-            <h1>Hi, I'm <span>Bucca</span>  <span class="animate" style="--i:2;"></span></h1>
-
-            <div class="text-animate">
-                <h3>Frontend Developer</h3>
-                <span class="animate" style="--i:3;"></span>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h3 class="hero-subtitle">Hello, I'm</h3>
+                <h1 class="hero-title">Bucca <span class="text-gradient">Frontend</span> Developer</h1>
+                <p class="hero-description">I create stunning digital experiences with modern technologies. Specializing in responsive web design, interactive UI/UX, and clean code architecture.</p>
+                
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Hire Me <i class='bx bx-right-arrow-alt'></i></a>
+                    <a href="#projects" class="btn btn-secondary">View My Work</a>
+                </div>
             </div>
-
-            <p> This is Bucca from CODETEAM, a self taught programmer and developer. i am here to help you with my skills, i love to code and make things happen. In addition, I am passionate about helping people develop their skills through  the use of internet.
-                <span class="animate" style="--i:4;"></span>
-            </p>
-
-            <div class="btn-box">
-                <a href="https://twitter.com/buccaprezdz33" class="btn">Hire Me</a>
-                <a href="https://twitter.com/buccaprezdz33" class="btn">Let's Talk</a>
-                <span class="animate" style="--i:5;"></span>
+            
+            <div class="hero-image">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/kushi-IvMcPWXQmT3Ur633OVILAf2NnYpoXD.png" alt="Bucca - Frontend Developer">
             </div>
-
+            
+            <div class="hero-scroll">
+                <span class="hero-scroll-text">Scroll Down</span>
+                <i class='bx bx-chevron-down hero-scroll-icon'></i>
+            </div>
         </div>
-
-        <div class="home-sci">
-            <a href="https://twitter.com/buccaprezdz33" rel="noopener" target="_blank" title="link" ><i class='bx bxl-twitter'></i></a>
-            <a href="https://twitter.com/buccaprezdz33" rel="noopener" target="_blank" title="link" ><i class='bx bxl-discord-alt'></i></a>
-            <a href="https://github.com/ThisIsBucca"  ><i class='bx bxl-github' rel="noopener" target="_blank" title="link"  ></i></a>
-            <span class="animate" style="--i:6;"></span>
-        </div>
-
-        <div class="home-imgHover"></div>
-        <span class="animate home-img" style="--i:7;"></span>
-
     </section>
 
-    <!-- about section design-->
-    <section class="about" id="skills">
-        
-        <h2 class="heading">Coding <span>Skills</span> <span class="animate scroll" style="--i:1;"></span></h2>
-
-        
-
-        <div class="about-content">
-
-            <div class="about-img">
-                <img src="./images/2kush.png" alt="kushi">
-                <span class="circle-spin"></span>
-                <span class="animate scroll" style="--i:2;"></span>
-            </div>
-
-            <div class="skills-row">
-                <div class="skills-column">
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About <span class="text-gradient">Me</span></h2>
             
-                    <div class="skills-box">
-                        <div class="skills-content">
-
-                            <div class="progress">
-                                <h3>HTML <span>80%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-
-                            <div class="progress">
-                                <h3>CSS <span>85%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-
-                            <div class="progress">
-                                <h3>JAVASCRIPT <span>65%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-
-                            <div class="progress">
-                                <h3>REACTJS <span>55%</span></h3>
-                                <div class="bar"><span></span></div>
-                            </div>
-
+            <div class="about-content">
+                <div class="about-image animate-on-scroll">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2kush-nJHrmjgGOCkkRsTEywjvqmMj3bSvTB.png" alt="Bucca - About Me">
+                </div>
+                
+                <div class="about-text">
+                    <h3>I'm a <span class="text-gradient">Creative Developer</span> Based in CODETEAM</h3>
+                    <p>This is Bucca from CODETEAM, a self-taught programmer and developer. I am passionate about creating beautiful, functional, and user-friendly websites and applications. With a strong foundation in frontend technologies and an eye for design, I deliver high-quality digital experiences that help businesses grow.</p>
+                    <p>I love to code and make things happen. In addition, I am passionate about helping people develop their skills through the use of internet technologies. My approach combines technical expertise with creative problem-solving to build solutions that not only look great but also perform exceptionally well.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item animate-on-scroll">
+                            <h4 class="stat-number">3+</h4>
+                            <p class="stat-title">Years Experience</p>
+                        </div>
+                        <div class="stat-item animate-on-scroll">
+                            <h4 class="stat-number">50+</h4>
+                            <p class="stat-title">Projects Completed</p>
+                        </div>
+                        <div class="stat-item animate-on-scroll">
+                            <h4 class="stat-number">30+</h4>
+                            <p class="stat-title">Happy Clients</p>
+                        </div>
+                        <div class="stat-item animate-on-scroll">
+                            <h4 class="stat-number">10+</h4>
+                            <p class="stat-title">Awards Won</p>
                         </div>
                     </div>
                 </div>
-                <span class="animate scroll" style="--i:3;"></span>
             </div>
         </div>
     </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My <span class="text-gradient">Skills</span></h2>
+            
+            <div class="skills-container">
+                <div class="skill-card animate-on-scroll">
+                    <i class='bx bxl-html5 skill-icon'></i>
+                    <h3 class="skill-title">HTML5</h3>
+                    <p class="skill-description">Semantic markup, accessibility, and modern HTML features for robust web structures.</p>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" data-value="90%"></div>
+                        <span class="skill-progress-value">90%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card animate-on-scroll">
+                    <i class='bx bxl-css3 skill-icon'></i>
+                    <h3 class="skill-title">CSS3</h3>
+                    <p class="skill-description">Advanced styling, animations, Flexbox, Grid, and responsive design techniques.</p>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" data-value="85%"></div>
+                        <span class="skill-progress-value">85%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card animate-on-scroll">
+                    <i class='bx bxl-javascript skill-icon'></i>
+                    <h3 class="skill-title">JavaScript</h3>
+                    <p class="skill-description">Modern ES6+, DOM manipulation, async programming, and interactive web applications.</p>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" data-value="75%"></div>
+                        <span class="skill-progress-value">75%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card animate-on-scroll">
+                    <i class='bx bxl-react skill-icon'></i>
+                    <h3 class="skill-title">React.js</h3>
+                    <p class="skill-description">Component-based architecture, state management, hooks, and modern React patterns.</p>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" data-value="70%"></div>
+                        <span class="skill-progress-value">70%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card animate-on-scroll">
+                    <i class='bx bxl-nodejs skill-icon'></i>
+                    <h3 class="skill-title">Node.js</h3>
+                    <p class="skill-description">Server-side JavaScript, RESTful APIs, and backend development for full-stack applications.</p>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" data-value="65%"></div>
+                        <span class="skill-progress-value">65%</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card animate-on-scroll">
+                    <i class='bx bxl-figma skill-icon'></i>
+                    <h3 class="skill-title">UI/UX Design</h3>
+                    <p class="skill-description">User-centered design, wireframing, prototyping, and creating intuitive interfaces.</p>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" data-value="80%"></div>
+                        <span class="skill-progress-value">80%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My <span class="text-gradient">Projects</span></h2>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="app">App Development</button>
+                <button class="filter-btn" data-filter="ui">UI/UX Design</button>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card animate-on-scroll" data-category="web">
+                    <img src="/placeholder.svg?height=400&width=600" alt="E-commerce Website" class="project-image">
+                    <div class="project-overlay">
+                        <span class="project-category">Web Design</span>
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-description">A fully responsive e-commerce website with product filtering, cart functionality, and secure checkout.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class='bx bx-link-external'></i></a>
+                            <a href="#" class="project-link"><i class='bx bxl-github'></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-on-scroll" data-category="app">
+                    <img src="/placeholder.svg?height=400&width=600" alt="Mobile App" class="project-image">
+                    <div class="project-overlay">
+                        <span class="project-category">App Development</span>
+                        <h3 class="project-title">Fitness Tracker App</h3>
+                        <p class="project-description">A cross-platform mobile application for tracking workouts, nutrition, and health metrics.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class='bx bx-link-external'></i></a>
+                            <a href="#" class="project-link"><i class='bx bxl-github'></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-on-scroll" data-category="ui">
+                    <img src="/placeholder.svg?height=400&width=600" alt="UI/UX Design" class="project-image">
+                    <div class="project-overlay">
+                        <span class="project-category">UI/UX Design</span>
+                        <h3 class="project-title">Banking Dashboard</h3>
+                        <p class="project-description">A modern banking dashboard with intuitive user interface and comprehensive financial analytics.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class='bx bx-link-external'></i></a>
+                            <a href="#" class="project-link"><i class='bx bxl-github'></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-on-scroll" data-category="web">
+                    <img src="/placeholder.svg?height=400&width=600" alt="Portfolio Website" class="project-image">
+                    <div class="project-overlay">
+                        <span class="project-category">Web Design</span>
+                        <h3 class="project-title">Creative Agency Website</h3>
+                        <p class="project-description">A dynamic website for a creative agency featuring animated sections and interactive elements.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class='bx bx-link-external'></i></a>
+                            <a href="#" class="project-link"><i class='bx bxl-github'></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-on-scroll" data-category="app">
+                    <img src="/placeholder.svg?height=400&width=600" alt="Web Application" class="project-image">
+                    <div class="project-overlay">
+                        <span class="project-category">App Development</span>
+                        <h3 class="project-title">Task Management System</h3>
+                        <p class="project-description">A comprehensive task management application with team collaboration features and analytics.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class='bx bx-link-external'></i></a>
+                            <a href="#" class="project-link"><i class='bx bxl-github'></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card animate-on-scroll" data-category="ui">
+                    <img src="/placeholder.svg?height=400&width=600" alt="UI Design" class="project-image">
+                    <div class="project-overlay">
+                        <span class="project-category">UI/UX Design</span>
+                        <h3 class="project-title">Travel Booking Platform</h3>
+                        <p class="project-description">A user-friendly travel booking interface with intuitive search and booking experience.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class='bx bx-link-external'></i></a>
+                            <a href="#" class="project-link"><i class='bx bxl-github'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Client <span class="text-gradient">Testimonials</span></h2>
+            
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Working with Bucca was an absolute pleasure. Their attention to detail and creative approach to problem-solving resulted in a website that exceeded our expectations. The project was delivered on time and the communication throughout was excellent."</p>
+                    
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="/placeholder.svg?height=100&width=100" alt="Client Avatar">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Sarah Johnson</h4>
+                            <p class="testimonial-position">CEO, TechStart Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Bucca transformed our outdated website into a modern, responsive platform that has significantly increased our user engagement and conversion rates. Their technical expertise combined with design skills make them a standout developer."</p>
+                    
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="/placeholder.svg?height=100&width=100" alt="Client Avatar">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Michael Chen</h4>
+                            <p class="testimonial-position">Marketing Director, GlobalBrand</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I've worked with many developers over the years, but Bucca stands out for their ability to understand our business needs and translate them into functional, beautiful digital solutions. They're now our go-to developer for all web projects."</p>
+                    
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="/placeholder.svg?height=100&width=100" alt="Client Avatar">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4 class="testimonial-name">Emily Rodriguez</h4>
+                            <p class="testimonial-position">Product Manager, InnovateLabs</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-controls">
+                    <button class="testimonial-btn testimonial-prev"><i class='bx bx-chevron-left'></i></button>
+                    <button class="testimonial-btn testimonial-next"><i class='bx bx-chevron-right'></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In <span class="text-gradient">Touch</span></h2>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 class="contact-title">Let's talk about your project</h3>
+                    <p class="contact-description">Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class='bx bx-map'></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>CODETEAM Headquarters, Digital Avenue</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class='bx bx-envelope'></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <a href="mailto:bucca@codeteam.com">bucca@codeteam.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class='bx bx-phone'></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <a href="tel:+1234567890">+123 456 7890</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <a href="https://twitter.com/buccaprezdz33" class="social-link" target="_blank" rel="noopener"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" class="social-link" target="_blank" rel="noopener"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#" class="social-link" target="_blank" rel="noopener"><i class='bx bxl-discord-alt'></i></a>
+                        <a href="https://github.com/ThisIsBucca" class="social-link" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Enter your name">
+                    </div>
+                  class="form-input" placeholder="Enter your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Your Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="Enter your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" class="form-input" placeholder="Enter subject">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea id="message" class="form-textarea" placeholder="Enter your message"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="form-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-text">
-            <p>copyright &copy; 2023 by Codetm | All Rights Reserved</p>
-            <span class="animate scroll" style="--i:1;"></span>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3 class="footer-logo">Bucca<span>.</span></h3>
+                    <p class="footer-description">Creating exceptional digital experiences through innovative frontend development and thoughtful UI/UX design.</p>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#home">Home</a></li>
+                        <li class="footer-link"><a href="#about">About</a></li>
+                        <li class="footer-link"><a href="#skills">Skills</a></li>
+                        <li class="footer-link"><a href="#projects">Projects</a></li>
+                        <li class="footer-link"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">Web Development</a></li>
+                        <li class="footer-link"><a href="#">UI/UX Design</a></li>
+                        <li class="footer-link"><a href="#">Mobile Development</a></li>
+                        <li class="footer-link"><a href="#">E-commerce Solutions</a></li>
+                        <li class="footer-link"><a href="#">Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links-column">
+                    <h3 class="footer-title">Connect</h3>
+                    <div class="footer-social">
+                        <a href="https://twitter.com/buccaprezdz33" class="footer-social-link" target="_blank" rel="noopener"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" class="footer-social-link" target="_blank" rel="noopener"><i class='bx bxl-linkedin'></i></a>
+                        <a href="#" class="footer-social-link" target="_blank" rel="noopener"><i class='bx bxl-discord-alt'></i></a>
+                        <a href="https://github.com/ThisIsBucca" class="footer-social-link" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2023 Bucca. All Rights Reserved by CODETEAM.</p>
+                
+                <div class="footer-bottom-links">
+                    <a href="#" class="footer-bottom-link">Privacy Policy</a>
+                    <a href="#" class="footer-bottom-link">Terms of Service</a>
+                </div>
+            </div>
         </div>
-
-
-        <div class="footer-iconTop">
-            <a href="#" title="go up"><i class='bx bxs-up-arrow-alt'></i></a>
-            <span class="animate scroll" style="--i:3;"></span>
-        </div>
-
     </footer>
 
-    <script src="./js/script.js"></script>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
 </body>
-
 </html>
