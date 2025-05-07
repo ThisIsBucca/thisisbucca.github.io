@@ -1,0 +1,114 @@
+/* Snow Animation Styles */
+.snow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .snowflake {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px white);
+    animation-name: snowfall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+  }
+  
+  .snowflake::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 50%;
+    transform: scale(1.5);
+    opacity: 0.3;
+  }
+  
+  .snowflake.small {
+    width: 4px;
+    height: 4px;
+    opacity: 0.6;
+  }
+  
+  .snowflake.medium {
+    width: 7px;
+    height: 7px;
+    opacity: 0.8;
+  }
+  
+  .snowflake.large {
+    width: 10px;
+    height: 10px;
+    opacity: 0.9;
+  }
+  
+  .snowflake.glow {
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+  }
+  
+  @keyframes snowfall {
+    0% {
+      transform: translateY(-100px) translateX(0) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 0.9;
+    }
+    100% {
+      transform: translateY(calc(100vh + 100px)) translateX(100px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Light theme adjustments */
+  [data-theme="light"] .snowflake {
+    background: rgba(10, 46, 54, 0.1);
+    filter: drop-shadow(0 0 5px rgba(10, 46, 54, 0.2));
+  }
+  
+  [data-theme="light"] .snowflake::before {
+    background: radial-gradient(circle at center, rgba(10, 46, 54, 0.1) 0%, rgba(10, 46, 54, 0) 100%);
+  }
+  
+  [data-theme="light"] .snowflake.glow {
+    box-shadow: 0 0 10px 2px rgba(10, 46, 54, 0.1);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .snowflake {
+      width: 6px;
+      height: 6px;
+    }
+  
+    .snowflake.small {
+      width: 3px;
+      height: 3px;
+    }
+  
+    .snowflake.medium {
+      width: 5px;
+      height: 5px;
+    }
+  
+    .snowflake.large {
+      width: 7px;
+      height: 7px;
+    }
+  }
+  
